@@ -14,3 +14,6 @@
 # Next Auth
 
 `$ npm install next-auth @prisma/client @next-auth/prisma-adapter`
+
+# React-hook-form
+`$ npm install react-hook-form`
