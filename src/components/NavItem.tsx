@@ -13,7 +13,8 @@ const NavItem = ({ mobile }: { mobile?: boolean }) => {
       {session?.user 
         ? 
         (<li className="py-2 text-center border-b-4 cursor-pointer"><button
-        onClick={() => signOut()}>Signout</button></li>) 
+        onClick={() => signOut()}
+        >Signout</button></li>) 
         : 
         (<li className="py-2 text-center border-b-4 cursor-pointer"><button 
         onClick={() => signIn()}
