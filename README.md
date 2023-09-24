@@ -20,3 +20,6 @@
 
 # React icons
 `$ npm i react-icons`
+
+# Axios
+`$ npm install axios`
