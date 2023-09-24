@@ -17,3 +17,6 @@
 
 # React-hook-form
 `$ npm install react-hook-form`
+
+# React icons
+`$ npm i react-icons`
