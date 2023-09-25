@@ -23,3 +23,7 @@
 
 # Axios
 `$ npm install axios`
+
+# bcryptjs
+`$ npm install bcryptjs`
+`$ npm install --save-dev @types/bcryptjs`

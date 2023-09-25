@@ -18,7 +18,7 @@ const RegisterPage = () => {
   }} = useForm<FieldValues>({
     defaultValues: {
       name: '',
-      emial: '',
+      email: '',
       password: '',
     }
   });
@@ -27,18 +27,14 @@ const RegisterPage = () => {
   const onSubmit: SubmitHandler<FieldValues> = async (body) => {
     setIsLoading(true);
     try {
-      const {data} = await axios.post('/api/register', body);
-      console.log(data)
+      const { data } = await axios.post('/api/register', body);
+      console.log(data);
       router.push('/auth/login');
     } catch (error) {
-      console.log(error)
+      console.log(error);
     } finally {
       setIsLoading(false);
     }
-
-
-    
-
   }
 
   return (
