@@ -16,14 +16,22 @@
 `$ npm install next-auth @prisma/client @next-auth/prisma-adapter`
 
 # React-hook-form
+
 `$ npm install react-hook-form`
 
 # React icons
+
 `$ npm i react-icons`
 
 # Axios
+
 `$ npm install axios`
 
 # bcryptjs
+
 `$ npm install bcryptjs`
 `$ npm install --save-dev @types/bcryptjs`
+
+# next-cloudinary 파일 업로드
+
+`$ npm install next-cloudinary`
