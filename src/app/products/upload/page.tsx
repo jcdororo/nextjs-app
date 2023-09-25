@@ -4,6 +4,8 @@ import Container from "@/components/Container";
 import Heading from "@/components/Heading";
 import ImageUpload from "@/components/ImageUpload";
 import Input from "@/components/Input";
+import { categories } from "@/components/categories/Categories";
+import CategoryInput from "@/components/categories/CategoryInput";
 import React, { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 
@@ -32,6 +34,7 @@ const ProductUploadPage = () => {
   const onSubmit: SubmitHandler<FieldValues> = (data) => {};
 
   const imageSrc = watch("imageSrc");
+  const category = watch("category");
 
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value);
@@ -61,7 +64,18 @@ const ProductUploadPage = () => {
               overflow-y-auto
             "
           >
-            {/* Category */}
+            {categories.map((item)=> (
+              <div key={item.label} className="col-span-1">
+                <CategoryInput 
+                  onClick={(category) => setCustomValue('category', category)}
+                  selected={category === item.path}
+                  label={item.label}
+                  icon={item.icon}
+                  path={item.path}
+                />
+
+              </div>
+            ))}
           </div>
           <hr />
 
