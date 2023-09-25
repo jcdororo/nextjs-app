@@ -35,3 +35,6 @@
 # next-cloudinary 파일 업로드
 
 `$ npm install next-cloudinary`
+
+# react kakao maps sdk
+`$ npm i react-kakao-maps-sdk`

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "../components/Navbar";
 import getCurrentUser from "./actions/getCurrentUser";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,9 @@ export default async function RootLayout({
       <body className={inter.className}>
           <Navbar currentUser={currentUser}/>
           {children}
+          <Script
+            src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a2fc960074df8051706ba1ac34ddde4&libraries=services,clusterer&autoload=false"
+          />
       </body>
     </html>
   );
