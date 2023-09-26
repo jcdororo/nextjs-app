@@ -47,3 +47,6 @@
 
 # @lucasmogari/react-pagination
 `$ npm install @lucasmogari/react-pagination`
+
+# query-string
+`$ npm install query-string`
