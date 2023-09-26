@@ -2,7 +2,7 @@ import { User } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import {useMemo} from "react"
-
+import {toast} from "react-toastify"
 interface UseFavorite {
   productId: string;
   currentUser?: User | null;
@@ -20,6 +20,8 @@ const useFavorite = ({productId, currentUser}: UseFavorite) => {
     e.stopPropagation();
 
     if(!currentUser){
+      toast.success('먼저 로그인을 해주세요.')
+
       return;
     }
 
@@ -34,8 +36,9 @@ const useFavorite = ({productId, currentUser}: UseFavorite) => {
 
       await request();
       router.refresh();
-
+      toast.success('성공했습니다.')
     } catch (err) {
+      toast.success('실패했습니다.')
 
     }
 
