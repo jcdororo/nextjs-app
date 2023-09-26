@@ -50,3 +50,6 @@
 
 # query-string
 `$ npm install query-string`
+
+# react loader spinner 
+`$ npm install react-loader-spinner`
