@@ -41,3 +41,6 @@
 
 # toastify
 `$ npm i react-toastify`
+
+# dayjs
+`$ npm install dayjs`
