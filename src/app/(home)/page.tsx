@@ -5,6 +5,8 @@ import ProductCard from '@/components/ProductCard';
 import getCurrentUser from '../actions/getCurrentUser';
 import FloatingButton from '@/components/FloatingButton';
 import Categories from '@/components/categories/Categories';
+import Pagenation from '@/components/Pagenation';
+import { PRODUCTS_PER_PAGE } from '@/constants';
 
 interface Homprops {
   searchParams: ProductsParams
@@ -12,10 +14,14 @@ interface Homprops {
 
 export default async function Home({searchParams}: Homprops) {
 
+  const page = searchParams?.page;
+  const pageNum = typeof page === 'string' ? Number(page) : 1;
+
+  console.log('pageNum',pageNum)
   const products = await getProducts(searchParams);
   const currentUser = await getCurrentUser();
 
-  console.log('products',products)
+
 
 
   return (
@@ -41,6 +47,9 @@ export default async function Home({searchParams}: Homprops) {
           </div>
         </>
       }
+
+
+      <Pagenation page={pageNum} totalItems={products.totalItems} perPage={PRODUCTS_PER_PAGE} />
 
 
       <FloatingButton 

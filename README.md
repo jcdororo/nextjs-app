@@ -44,3 +44,6 @@
 
 # dayjs
 `$ npm install dayjs`
+
+# @lucasmogari/react-pagination
+`$ npm install @lucasmogari/react-pagination`
