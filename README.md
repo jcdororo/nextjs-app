@@ -53,3 +53,9 @@
 
 # react loader spinner 
 `$ npm install react-loader-spinner`
+
+# SWR (stale-while-revalidate)
+데이터를 가져오기 위한 React Hook 라이브러리   
+SWR은 원겨 데이터를 가져올 때 캐싱된 데이터가 있으면 그 데이터를 먼저 반환(stale)한 다음 가져오기 요청(revalidate)을 보내고,   
+마지막으로 최신 데이터와 함께 제공하는 라이브러리이다.   
+`$ npm install swr`
