@@ -21,6 +21,16 @@ const Contacts = ({
   setLayout,
   setReceiver
 }: ContactsProps) => {
+
+
+const filterMessages = (userId: string, userName: string | null, userImage: string | null) => {
+  setReceiver({
+    receiverId: userId,
+    receiverName: userName || "",
+    receiverImage: userImage || ""
+  })
+}
+
   return (
     <div className='w-full overflow-auto h-[calc(100vh_-_56px)] border-[1px]'>
 
@@ -37,7 +47,10 @@ const Contacts = ({
               return (
                 <div
                   key={user.id}
-                  onClick={() => setLayout(true)}
+                  onClick={() => {
+                    filterMessages(user.id, user.name, user.image),
+                    setLayout(true)
+                  }}
                 >
 
                     <User 
