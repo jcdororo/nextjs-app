@@ -13,7 +13,7 @@ interface ProductInfoProps {
     icon: IconType,
     label: string,
     description: string;
-  }
+  } | undefined
 }
 
 const ProductInfo = ({
@@ -43,7 +43,7 @@ const ProductInfo = ({
       {category &&
         <ProductCategory 
           icon={category.icon}
-          labe={category.label}
+          label={category.label}
           description={category.description}
         />
       }
