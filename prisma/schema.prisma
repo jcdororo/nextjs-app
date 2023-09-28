@@ -100,15 +100,15 @@ model Conversation {
 }
 
 model Message {
-  id String @id @default(cuid())
-  createArt DateTime @default(now())
-  updateAt DateTime @updatedAt
-  text String?
-  image String?
+  id           String @id @default(cuid())
+  createdAt    DateTime @default(now())
+  updateAt     DateTime @updatedAt
+  text         String?
+  image        String?
   sender User @relation(name:"sender", fields: [senderId], references: [id])
-  senderId String
+  senderId     String
   receiver User @relation(name:"receiver", fields: [receiverId], references: [id])
-  receiverId String
+  receiverId   String
   conversation Conversation @relation(fields: [conversationId], references: [id])
   conversationId String
 }
