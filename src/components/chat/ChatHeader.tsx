@@ -30,18 +30,18 @@ const ChatHeader = ({
         </div>
 
       
-      <div className='flex items-center gap-[0.6rem]'>
-        <div>
-          <Avatar src={receiverImage}/>
-        </div>
-        <h2 className='text-lg font-semibold'>
-          {receiverName}
-          {lastMessageTime && (
-            <p className='text-gray-600'>
-              {formatTime(lastMessageTime)}
-            </p>
-          )}
-        </h2>
+        <div className='flex items-center gap-[0.6rem]'>
+          <div>
+            <Avatar src={receiverImage}/>
+          </div>
+          <h2 className='text-lg font-semibold'>
+            {receiverName}
+            {lastMessageTime && (
+              <p className='text-gray-600'>
+                {formatTime(lastMessageTime)}
+              </p>
+            )}
+          </h2>
         </div>
       </div>
     </div>
