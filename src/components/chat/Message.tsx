@@ -1,6 +1,7 @@
 import React from 'react'
 import Avatar from '../Avatar';
 import { fromNow } from '@/helpers/dayjs';
+import Image from 'next/image';
 
 
 interface MessageProps {
@@ -37,6 +38,19 @@ const Message = ({
             {fromNow(time)}
           </span>
         </div>
+
+        {messageImage && (
+          <div className='overflow-hidden rounded-md mx-[0.6rem] max-w-[80%]'>
+            <Image 
+              src={messageImage}
+              width={300}
+              height={300}
+              alt=''
+            />
+
+          </div>
+        )}
+
         {messageText && (
           <div
             className={
